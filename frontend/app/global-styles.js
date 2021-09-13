@@ -11,20 +11,26 @@ body {
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-body.fontLoaded {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
 
 #app {
   padding-left: 10rem;
   padding-right: 10rem;
   margin-top: 30px;
+  margin-bottom:30px;
 }
-div {
-  
+table {
+  width:100%;
+
+  .centered {
+    text-align: center;
+  }
+}
+tr {
+  vertical-align: text-top;
+  border-bottom: 1px solid black;
 }
 p,
 label {

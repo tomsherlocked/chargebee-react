@@ -9,8 +9,8 @@
 
 1. Clone the repo
 2. Add a `.env` file to the root of the `/backend` repo, based off the example env. You'll need to generate a chargebee API key
-3. `cd backend && yarn && yarn dev` 
-4. (in a new terminal window) `cd frontend && yarn && yarn start`
+3. `cd backend && yarn` to install. Run with `yarn dev` 
+4. (in a new terminal window) `cd frontend && yarn` to install. Run with `yarn start`
 5. Head to `localhost:3001` to view the frontend
 
 

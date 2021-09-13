@@ -10,16 +10,28 @@ const router = express.Router();
 router.get("/status", (req, res) => res.send("OK"));
 
 /*
- * GET v1/customers
+ * GET v1/customerList (not in use - simply grabs all customers)
  *
  */
 
-router.get("/customers", async (req, res) => {
+router.get("/customerList", async (req, res) => {
   console.log("hit customer API");
   const results = await chargebeeProvider.getCustomer();
   results.hasError
     ? res.status(results.error.code).send(results.error.message)
     : res.json({ customers: results.list, count: results.list.length });
+});
+
+/*
+ * GET v1/customers
+ */
+
+router.get("/customers", async (req, res) => {
+  console.log("hit sub API");
+  const results = await chargebeeProvider.getSubscription();
+  results.hasError
+    ? res.status(results.error.code).send(results.error.message)
+    : res.json({ subscriptions: results.list, count: results.list.length });
 });
 
 /**
